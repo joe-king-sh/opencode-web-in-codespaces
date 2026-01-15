@@ -67,7 +67,7 @@ z.aiは月額$3でClaude APIを利用できるサービスです。
 ## ディレクトリ構成
 
 ```
-opencode-workspace/
+root/
 ├── .devcontainer/
 │   └── devcontainer.json  # Codespaces設定
 ├── scripts/
