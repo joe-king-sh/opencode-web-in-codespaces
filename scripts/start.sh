@@ -25,7 +25,7 @@ echo "============================================"
 echo ""
 
 # Set working directory
-WORKSPACE_DIR="/workspaces/opencode-workspace/workspace"
+WORKSPACE_DIR="/workspaces/opencode-web-in-codespaces"
 
 # Create workspace directory if it doesn't exist
 mkdir -p "$WORKSPACE_DIR"
