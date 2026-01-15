@@ -32,4 +32,4 @@ mkdir -p "$WORKSPACE_DIR"
 
 # Start OpenCode Web
 cd "$WORKSPACE_DIR"
-exec npx opencode@latest web --port 3000 --host 0.0.0.0
+exec npx -y opencode-ai@latest web --mdns --port 3000
