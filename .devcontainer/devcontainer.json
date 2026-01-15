@@ -14,7 +14,7 @@
       "visibility": "public"
     }
   },
-  "postStartCommand": "bash /workspaces/opencode-web-codespaces/scripts/start.sh",
+  "postStartCommand": "bash /workspaces/opencode-web-in-codespaces/scripts/start.sh",
   "customizations": {
     "vscode": {
       "settings": {
