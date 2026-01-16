@@ -17,15 +17,16 @@ echo ""
 echo "============================================"
 echo "🚀 OpenCode Web is starting..."
 echo ""
-echo "📱 Access URL (copy this for iPhone):"
+echo "📱 Access URL:"
 echo ""
 echo "$ACCESS_URL"
 echo ""
 echo "============================================"
 echo ""
 
-# Set working directory
-WORKSPACE_DIR="/workspaces/opencode-web-in-codespaces"
+# Set working directory (Codespaces-only)
+# Determine repo root from this script location to avoid depending on environment variables.
+WORKSPACE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 # Create workspace directory if it doesn't exist
 mkdir -p "$WORKSPACE_DIR"
