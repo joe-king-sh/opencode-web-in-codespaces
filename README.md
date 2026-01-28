@@ -1,25 +1,25 @@
 # OpenCode Web on GitHub Codespaces
 
-iPhoneなどのモバイルデバイスからブラウザ経由でOpenCode Webにアクセスするための環境です。
+iPhone などのモバイルデバイスからブラウザ経由で OpenCode Web にアクセスするための環境です。
 
 ## セットアップ手順
 
 ### 1. リポジトリの準備
 
-このリポジトリをGitHubにプッシュするか、フォークしてください。
+このリポジトリを GitHub にプッシュするか、フォークしてください。
 
-### 2. Codespacesの起動
+### 2. Codespaces の起動
 
-1. GitHubリポジトリページを開く
+1. GitHub リポジトリページを開く
 2. 緑色の「Code」ボタンをクリック
 3. 「Codespaces」タブを選択
 4. 「Create codespace on main」をクリック
 
 初回起動時は環境構築に数分かかります。
 
-### 3. OpenCode Webへのアクセス
+### 3. OpenCode Web へのアクセス
 
-Codespacesが起動すると、ターミナルに以下のようなURLが表示されます：
+Codespaces が起動すると、ターミナルに以下のような URL が表示されます：
 
 ```
 ============================================
@@ -32,33 +32,34 @@ https://xxx-3000.app.github.dev
 ============================================
 ```
 
-このURLをコピーしてブラウザで開いてください。
+この URL をコピーしてブラウザで開いてください。
 
-## iPhoneからのアクセス方法
+## iPhone からのアクセス方法
 
-1. Codespacesを起動
-2. ターミナルに表示されるURLを長押ししてコピー
-3. Safariで開く
-4. GitHubアカウントでログイン（初回のみ）
+1. Codespaces を起動
+2. ターミナルに表示される URL を長押ししてコピー
+3. Safari で開く
+4. GitHub アカウントでログイン（初回のみ）
 
 ## 初回起動時のプロバイダー設定
 
-OpenCode Webを初めて使う場合、LLMプロバイダーの設定が必要です。
+OpenCode Web を初めて使う場合、LLM プロバイダーの設定が必要です。
 
 ### z.ai を使用する場合
 
-z.aiは月額$3でClaude APIを利用できるサービスです。
+z.ai は月額$3 で Claude API を利用できるサービスです。
 
-1. **z.aiでサブスクリプション登録**
+1. **z.ai でサブスクリプション登録**
+
    - https://z.ai/subscribe にアクセス
    - サブスクリプションに登録
-   - APIキーを取得
+   - API キーを取得
 
-2. **OpenCode Webでプロバイダー設定**
-   - OpenCode Webの画面で `/connect` と入力
+2. **OpenCode Web でプロバイダー設定**
+   - OpenCode Web の画面で `/connect` と入力
    - 「Others」を選択
    - Base URL: `https://api.z.ai/api/anthropic`
-   - APIキーを入力
+   - API キーを入力
 
 ### 他のプロバイダーを使用する場合
 
@@ -71,37 +72,35 @@ root/
 ├── .devcontainer/
 │   └── devcontainer.json  # Codespaces設定
 ├── scripts/
-│   └── start.sh           # 起動スクリプト
-├── workspace/             # 作業用ディレクトリ
-│   └── .gitkeep
+│   └── start-opencode-web.sh  # 起動スクリプト
 ├── .gitignore
 └── README.md
 ```
 
 ## トラブルシューティング
 
-### URLが表示されない
+### URL が表示されない
 
 ターミナルで手動で起動スクリプトを実行してください：
 
 ```bash
-bash /workspaces/opencode-workspace/scripts/start.sh
+bash /workspaces/opencode-workspace/scripts/start-opencode-web.sh
 ```
 
 ### ポートが公開されていない
 
-1. VS Codeの「PORTS」タブを開く
-2. ポート3000の行を右クリック
+1. VS Code の「PORTS」タブを開く
+2. ポート 3000 の行を右クリック
 3. 「Port Visibility」→「Public」を選択
 
 ### 接続できない
 
-- Codespacesが実行中であることを確認
-- URLが正しいことを確認（`-3000`が含まれている）
-- GitHubにログインしているか確認
+- Codespaces が実行中であることを確認
+- URL が正しいことを確認（`-3000`が含まれている）
+- GitHub にログインしているか確認
 
 ## 参考リンク
 
-- [OpenCode公式ドキュメント](https://opencode.ai/docs/web/)
+- [OpenCode 公式ドキュメント](https://opencode.ai/docs/web/)
 - [GitHub Codespaces](https://github.com/features/codespaces)
 - [z.ai](https://z.ai/)
